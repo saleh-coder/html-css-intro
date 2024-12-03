@@ -1,0 +1,47 @@
+<!-- Margin Collapse Example -->
+<html>
+  <head>
+    <title>Margin Collapse</title>
+    <style>
+      /* Sets the text color of the entire body to white for better visibility */
+      body {
+        color: white;
+      }
+
+      /* Defines a blue background for elements with the "blue" class */
+      .blue {
+        background-color: dodgerblue;
+      }
+
+      /* Defines a red background for elements with the "red" class */
+      .red {
+        background-color: crimson;
+      }
+
+      /* Defines a green background for elements with the "green" class */
+      .green {
+        background-color: forestgreen;
+      }
+
+      /* Applies padding and margin to all <div> and <span> elements */
+      div,
+      span {
+        padding: 5px; /* Space inside the element */
+        margin: 5px; /* Space outside the element */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Inline elements with different background colors -->
+    <span class="blue">1</span><span class="red">2</span
+    ><span class="green">3</span>
+
+    <hr />
+    <!-- Horizontal rule to separate the sections -->
+
+    <!-- Block-level elements with different background colors -->
+    <div class="blue">1</div>
+    <div class="red">2</div>
+    <div class="green">3</div>
+  </body>
+</html>

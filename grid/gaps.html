@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gap</title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                margin: 60px;
+            }
+
+            .grid > div {
+                border: solid cyan 4px;
+                padding: 5px;
+            }
+
+            .grid {
+                height: 100%;
+                
+                /* Activates grid layout for the container */
+                display: grid;
+
+                /* Defines the grid columns with named grid lines:
+                   - The first and third columns take 1fr each
+                   - The second column is also 1fr, but it has named lines in the grid */
+                grid-template-columns: 
+                    [col-start] 1fr 
+                    [col-middle-1 col-middle-1] 1fr 
+                    [col-middle-2 col-middle-2] 1fr [col-end];
+
+                /* Defines the grid rows:
+                   - All three rows take 1fr (equal height for all rows) */
+                grid-template-rows: 1fr 1fr 1fr;
+
+                /* Defines the gap between columns and rows */
+                column-gap: 20px;
+                row-gap: 20px;
+            }
+
+            /* Style for the first grid item:
+               - It spans 2 columns starting from the second column and spans 2 columns */
+            .d1 {
+                grid-column: 2 / span 2;
+            }
+
+            /* Style for the second grid item:
+               - It spans from the first column (using the grid line name 'col-start') 
+               - It spans all 3 rows (span 3) */
+            .d2 {
+                grid-column: col-start / col-middle-1;
+                grid-row: 1 / span 3;
+            }
+
+            /* Style for the third grid item:
+               - It starts from the second row and second column and spans 2 rows and 2 columns */
+            .d3 {
+                grid-area: 2 / 2 / span 2 / span 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="d1">1</div>
+            <div class="d2">2</div>
+            <div class="d3">3</div>
+        </div>
+    </body>
+</html>

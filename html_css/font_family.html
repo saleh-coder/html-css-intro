@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Family</title>
+    <!-- Preconnecting to Google Fonts for better performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Importing multiple font families from Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Global font-family rule */
+      body {
+        font-family: "Oswald", sans-serif; /* Primary font */
+        margin: 0;
+        padding: 20px;
+        background-color: #f5f5f5;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      /* Heading with bold font-weight */
+      h1 {
+        font-family: "Roboto", sans-serif; /* Different font family for headings */
+        font-weight: 700;
+        text-align: center;
+        color: #222;
+      }
+
+      /* Paragraphs using a lighter font-weight */
+      p {
+        font-family: "Oswald", sans-serif;
+        font-weight: 300; /* Thin style for contrast */
+        color: #555;
+        text-align: justify;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Example of using italics and bold */
+      em {
+        font-family: "Roboto", sans-serif;
+        font-style: italic; /* Italic emphasis */
+        font-weight: 500; /* Medium weight */
+      }
+
+      strong {
+        font-family: "Roboto", sans-serif;
+        font-weight: 900; /* Extra bold for strong emphasis */
+        color: crimson;
+      }
+
+      /* Additional styling for better layout */
+      .highlight {
+        font-family: "Oswald", sans-serif;
+        font-weight: 700;
+        color: #0066cc;
+        background-color: #e0f7fa;
+        padding: 5px;
+        border-radius: 3px;
+      }
+
+      /* Styling blockquotes */
+      blockquote {
+        font-family: "Roboto", sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        color: #666;
+        border-left: 5px solid #ccc;
+        padding-left: 10px;
+        margin: 20px auto;
+        max-width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Understanding Font-Family</h1>
+    <p>
+      The <strong>font-family</strong> property in CSS allows you to specify the
+      typeface for your text. You can use web-safe fonts or import custom fonts
+      like those from <span class="highlight">Google Fonts</span>. Different
+      weights and styles create visual hierarchy and make your text more
+      readable.
+    </p>
+    <p>
+      For example, using <em>italics</em> or <strong>bold</strong> styles can
+      help emphasize certain words or phrases in a paragraph. Here's an example
+      of an italicized and bold text for <em>emphasis</em>.
+    </p>
+    <blockquote>
+      "Typography is the art and technique of arranging type to make written
+      language legible, readable, and appealing when displayed."
+    </blockquote>
+    <p>
+      When choosing fonts, always include a fallback font like
+      <em>sans-serif</em> or <em>serif</em> to ensure a consistent experience
+      across all devices.
+    </p>
+  </body>
+</html>

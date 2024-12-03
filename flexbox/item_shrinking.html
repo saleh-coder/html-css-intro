@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox: Shrinking Effect</title>
+    <style>
+      /* General body styling */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        display: flex; /* Enables Flexbox on the body */
+        flex-direction: column; /* Arranges children in a column */
+        justify-content: center; /* Vertically center content */
+        align-items: center; /* Horizontally center content */
+        height: 100vh; /* Full viewport height */
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        display: flex; /* Enables Flexbox */
+        gap: 10px; /* Adds space between flex items */
+        background-color: #e6e6e6;
+        padding: 20px;
+        border: 2px solid #ccc;
+        width: 80vw; /* Width is now based on viewport width */
+        height: 200px; /* Fixed height for the container */
+        overflow: hidden; /* Hides content that overflows */
+        transition: width 0.2s; /* Smooth transition for resizing */
+      }
+
+      .box {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 1rem;
+        flex: 1; /* Ensures each box can grow/shrink */
+        min-width: 150px; /* Sets a minimum width to prevent items from becoming too small */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Shrinking examples */
+      .box--shrink {
+        flex-shrink: 1; /* Allows this item to shrink */
+      }
+
+      .box--shrink-2 {
+        flex-shrink: 2; /* Item 2 shrinks twice as much as Item 1 */
+      }
+
+      .box--shrink-3 {
+        flex-shrink: 3; /* Item 3 shrinks three times as much as Item 1 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox: Shrinking Effect</h1>
+
+    <!-- Example of item shrinking using flex-shrink -->
+    <div class="container">
+      <div class="box box--shrink">1</div>
+      <div class="box box--shrink-2">2</div>
+      <div class="box box--shrink-3">3</div>
+    </div>
+
+    <p>Resize the window to see the shrink effect.</p>
+  </body>
+</html>

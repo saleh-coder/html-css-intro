@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <title>Selectors #1</title>
+    <style>
+      /* Element Selector */
+      body {
+        background-color: black;
+        color: white;
+      }
+
+      /* This targets all <section>, <span>, and <p> elements */
+      section,
+      span,
+      p {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        margin: 10px;
+        background-color: crimson;
+        font-size: 40px;
+        text-align: center;
+      }
+
+      /* Class Selector */
+      /* This targets all elements with the class "circle" */
+      .circle {
+        display: inline-block;
+        height: 50px;
+        width: 50px;
+        margin: 10px;
+        border-radius: 25px;
+        background-color: blueviolet;
+        font-size: 40px;
+        text-align: center;
+      }
+
+      /* Class Selector with multiple classes */
+      /* This targets elements with both "highlight" and "circle" classes */
+      .highlight {
+        border: 4px solid yellow;
+        color: yellow;
+        border-radius: 29px;
+      }
+
+      /* ID Selector */
+      /* This targets the element with the id "buy-button" */
+      #buy-button {
+        height: 30px;
+        width: 120px;
+        background-color: forestgreen;
+        color: white;
+        border: 1px solid white;
+        border-radius: 15px;
+        text-transform: uppercase;
+      }
+
+      /* Attribute Selectors */
+      /* This targets any element with an href attribute (such as links) */
+      [href],
+      [shouldDisappear] {
+        display: none;
+      }
+
+      /* Universal Selector */
+      /* This applies to all elements in the page */
+      * {
+        border: 2px solid greenyellow;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Element Selector</h2>
+    <!-- Element selectors applied to <section>, <span>, and <p> tags -->
+    <section>1</section>
+    <span>2</span>
+    <p>3</p>
+
+    <h2>Class Selectors</h2>
+    <!-- Class selector applied to <div> elements with the class "circle" -->
+    <div class="circle">4</div>
+    <!-- Multiple class selectors: both "highlight" and "circle" classes are applied -->
+    <div class="highlight circle">5</div>
+
+    <h2>ID Selectors</h2>
+    <!-- ID selector applied to the <button> element with the id "buy-button" -->
+    <button id="buy-button">Buy</button>
+
+    <h2>Attribute Selectors</h2>
+    <!-- Attribute selector hides any element with an href attribute -->
+    <a href="https://www.google.com">Google</a>
+    <!-- Attribute selector hides elements with the "shouldDisappear" attribute -->
+    <div shouldDisappear>Hide #1</div>
+    <main shouldDisappear>Hide #2</main>
+
+    <h2>Universal Selector</h2>
+    <!-- Universal selector applies a border and margin to all elements on the page -->
+    <label>It will be applied to all elements on the page!</label>
+  </body>
+</html>
+
+<!-- 
+ Explanation of the Selectors:
+ 
+ Element Selector:
+ It targets HTML elements directly (e.g., <section>, <span>, <p>).
+ Here, it sets common styles for all these elements.
+      
+ Class Selectors:
+ A class selector targets elements with a specific class attribute. 
+ For example, .circle targets all elements with the class circle.
+ You can also use multiple classes on the same element, like .highlight.circle,
+ which will apply both class styles.
+
+ ID Selector:
+ An ID selector is used to target a specific element with a unique id attribute,
+ such as #buy-button. ID selectors are generally used to select single, unique 
+ elements on a page.
+ 
+ Attribute Selectors:
+ The attribute selector targets elements that have a specific attribute.
+ [href] selects any element with the href attribute (commonly <a> tags).
+ [shouldDisappear] hides any element that has this custom attribute.
+
+ Universal Selector:
+ The universal selector (*) applies styles to all elements on the page. In this case, it adds a green-yellow border and margin to every element.
+ This code demonstrates the use of different selectors in CSS, showing how they apply to HTML elements and allowing you to manipulate their styles.
+-->

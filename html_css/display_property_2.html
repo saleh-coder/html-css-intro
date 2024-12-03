@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Display Property #2</title>
+    <style>
+      body {
+        color: white;
+      }
+
+      /* Using display: flex on the div to align the spans correctly */
+      div {
+        display: flex;
+      }
+
+      /* Applying inline-block behavior and styling to the spans */
+      span {
+        display: inline-block;
+        background-color: dodgerblue;
+        padding: 5px; /* Adding padding inside the span */
+        margin: 5px; /* Adding margin around the span */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Div container with flex display, which removes unwanted space between the spans -->
+    <div>
+      <!-- Span elements that now behave properly within the flex container -->
+      <span>SPAN #1</span>
+      <span>SPAN #2</span>
+    </div>
+  </body>
+</html>
+
+<!-- 
+
+Explanation of Changes:
+
+ div (display: flex): By using display: flex on the parent <div>, the
+ child <span> elements are placed in a row without the unwanted space
+ that typically occurs when using display: inline-block. This solves
+ the issue of extra spacing between the elements.
+
+ span (display: inline-block): The span elements are given inline-block
+ behavior so they retain their inline characteristics but can now 
+ respect the margin and padding correctly when placed inside a flex 
+ container.
+
+ margin and padding: With margin: 5px and padding: 5px applied, you can
+ see the exact margin between the spans (5px), and it will behave as 
+ expected without any additional space in between.
+
+ This is one of the possible solutions for handling the unwanted space
+ between inline-block elements.
+-->

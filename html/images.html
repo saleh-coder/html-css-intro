@@ -1,0 +1,34 @@
+<!-- Example using the Picsum image generator service -->
+<!-- https://picsum.photos/200/300 -->
+
+<h2>Images</h2>
+
+<div>
+  <!-- Absolute URL: Refers to the full web address -->
+  <img src="https://picsum.photos/400" alt="Cool Photo" />
+</div>
+
+<div>
+  <!-- Relative URL: Refers to a file within the project directory -->
+  <img src="../images/test_image.jpg" alt="Cool Photo" />
+</div>
+
+<div>
+  <!-- Picture element: Displays different images based on screen size -->
+  <picture>
+    <!-- Loads this image for screens 600px or wider -->
+    <source srcset="https://picsum.photos/500" media="(min-width: 600px)" />
+    <!-- Fallback image for smaller screens -->
+    <img src="https://picsum.photos/200" alt="Logo" />
+  </picture>
+</div>
+
+<div>
+  <!-- Picture element with an intentional error for testing -->
+  <picture>
+    <!-- Image source -->
+    <source srcset="https://picsum.photos/100" />
+    <!-- Fallback image with an incorrect URL to demonstrate error handling -->
+    <img src="https://picsu.photos/200" alt="Failure Test" />
+  </picture>
+</div>

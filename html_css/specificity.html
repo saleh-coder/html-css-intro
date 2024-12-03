@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Specificity</title>
+    <style>
+      /* Global rules */
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+      }
+
+      /* Less specific rules (targeting generic elements) */
+      h2 {
+        color: lightblue;
+      }
+
+      p {
+        color: lightgray;
+      }
+
+      /* Basic class styles */
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: coral !important; /* Rules with !important take the highest priority */
+        display: inline-block;
+        margin: 10px;
+      }
+
+      /* Combined class selector */
+      div.blue {
+        background-color: cornflowerblue;
+      }
+
+      /* ID selector */
+      #single {
+        background: linear-gradient(to right, red, yellow);
+        border: 2px solid white;
+        padding: 10px;
+      }
+
+      /* Additional properties with classes */
+      .warning {
+        background-color: goldenrod;
+        padding: 10px;
+        color: black;
+        border-radius: 5px;
+      }
+
+      .important {
+        background-color: crimson;
+        color: white;
+      }
+
+      /* Combining selectors */
+      .warning.important {
+        background-color: purple; /* This takes precedence due to the combined specificity */
+      }
+
+      /* Using pseudo-classes to increase specificity */
+      div:hover {
+        border: 5px solid lime;
+      }
+
+      /* Combining IDs and classes */
+      #single.warning {
+        box-shadow: 0 0 10px white;
+      }
+
+      /* Inline styles (highest priority except over !important) */
+      /* Example: style="background-color: pink" directly on an element */
+    </style>
+  </head>
+  <body>
+    <h1>Understanding CSS Specificity</h1>
+    <p>
+      Specificity is a core concept to understand how browsers decide which CSS
+      rule to apply. Experiment with the rules below to see how they affect the
+      styles!
+    </p>
+
+    <h2>Rule with !important</h2>
+    <div class="blue box">Rule with !important applied</div>
+
+    <h2>ID and Class Rules</h2>
+    <div id="single" class="warning">Who wins here?</div>
+
+    <h2>Combined Classes</h2>
+    <div class="warning important">This is confidential</div>
+
+    <h2>Pseudo-classes</h2>
+    <div class="box">Hover over me!</div>
+
+    <h2>Inline Style</h2>
+    <div style="background-color: pink; padding: 10px">
+      This element uses inline style
+    </div>
+  </body>
+</html>

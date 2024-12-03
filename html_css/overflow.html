@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overflow Example</title>
+    <style>
+      body {
+        background-color: #1a1a1a;
+        color: white;
+        font-family: "Poppins", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .overflow {
+        background-color: #f4f4f4;
+        color: #333;
+        font-size: 1.2rem;
+        height: 160px;
+        width: 320px;
+        border-radius: 10px;
+        border: none;
+        padding: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        text-align: left;
+      }
+
+      .overflow ul {
+        margin: 10px 0;
+        padding-left: 20px;
+      }
+
+      .overflow ul li {
+        margin-bottom: 5px;
+      }
+
+      /* Scrollbar Styling */
+      .overflow::-webkit-scrollbar {
+        height: 8px;
+      }
+
+      .overflow::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 5px;
+      }
+
+      .overflow::-webkit-scrollbar-thumb:hover {
+        background-color: #555555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="overflow">
+      <strong>CSS Overflow:</strong> The <em>overflow</em> property controls how
+      content is displayed when it exceeds the dimensions of its container. It
+      allows you to manage:
+      <ul>
+        <li><strong>Clipping:</strong> Hiding extra content.</li>
+        <li><strong>Scrolling:</strong> Adding scrollbars for navigation.</li>
+        <li>
+          <strong>Responsive Adjustments:</strong> Adapting to screen sizes.
+        </li>
+      </ul>
+      Discover the power of <strong>overflow</strong> to create clean and
+      dynamic web layouts. 💡
+    </div>
+  </body>
+</html>

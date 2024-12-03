@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Box Model</title>
+    <!-- The title of the page, displayed in the browser tab -->
+    <style>
+      /* Resets the body's default margin to ensure consistency across browsers */
+      body {
+        margin: 0;
+      }
+
+      /* Adds a 20px margin around all <div> elements */
+      div {
+        margin: 20px;
+      }
+
+      /* Styles for the first <div> element */
+      #div1 {
+        border: 3px solid crimson; /* Crimson-colored border with 3px width */
+        padding-top: 10px; /* Adds 10px of space inside the top of the border */
+      }
+
+      /* Styles for the second <div> element */
+      #div2 {
+        border: green solid 5px; /* Green-colored border with 5px width */
+        padding: 10px; /* Adds 10px of space inside the border on all sides */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- First content block styled with #div1 rules -->
+    <div id="div1">Content #1</div>
+
+    <!-- Second content block styled with #div2 rules -->
+    <div id="div2">Content #2</div>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!-- https://www.w3schools.com/colors/colors_hsl.asp -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors #1</title>
+    <style>
+      /* Basic styles for the page */
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Enable flexbox layout */
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full height of the viewport */
+      }
+
+      li {
+        padding: 8px;
+        margin-right: 20px;
+      }
+
+      /* Styles for the box */
+      .box {
+        height: 80px;
+        width: 80px;
+        display: flex; /* Enable flexbox for easy content alignment */
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-weight: bold;
+        margin-top: 100px;
+      }
+
+      /* Blue box specific styles */
+      .blue {
+        background-color: deepskyblue;
+        color: hsl(
+          218,
+          83%,
+          16%
+        ); /* Set text color using HSL (hue: 218, saturation: 83%, lightness: 16%) */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Brief explanation of HSL -->
+    <div
+      style="
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-size: 14px;
+      "
+    >
+      <h1>HSL Color Model:</h1>
+      <p>
+        The HSL color model is used to define colors based on three components:
+      </p>
+      <ul>
+        <li>
+          <strong>Hue:</strong> The color itself, represented as a degree on the
+          color wheel (0° to 360°). In this example, 218° corresponds to blue.
+        </li>
+        <li>
+          <strong>Saturation:</strong> The intensity or purity of the color.
+          100% is full color, while 0% results in gray. In this example, it's
+          83%.
+        </li>
+        <li>
+          <strong>Lightness:</strong> The lightness of the color. 0% is black,
+          100% is white, and 50% is the pure color. In this example, it's 16%,
+          so it’s a dark blue.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Blue box with centered text -->
+    <div class="box blue">Colors #1</div>
+  </body>
+</html>

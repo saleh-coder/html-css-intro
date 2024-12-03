@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Unit #3: vmin and vmax</title>
+    <style>
+      /* Global styles */
+      body {
+        background-color: black; /* Dark background for contrast */
+        color: white; /* Text color for readability */
+        font-family: Arial, sans-serif; /* Base font for consistency */
+        margin: 0;
+        display: flex;
+        flex-direction: column; /* Stack content vertically */
+        align-items: center; /* Center content horizontally */
+        gap: 20px; /* Add space between elements */
+        padding: 20px; /* Add padding for aesthetics */
+      }
+
+      /* Box styled with vmin */
+      .box-vmin {
+        height: 20vmin; /* Height is 20% of the smaller of viewport width or height */
+        width: 20vmin; /* Width is 20% of the smaller of viewport width or height */
+        background-color: aquamarine; /* Light greenish background */
+        color: black; /* Text color for contrast */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Box styled with vmax */
+      .box-vmax {
+        height: 20vmax; /* Height is 20% of the larger of viewport width or height */
+        width: 20vmax; /* Width is 20% of the larger of viewport width or height */
+        background-color: tomato; /* Reddish background */
+        color: black; /* Text color for contrast */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Example combining vmin and vmax */
+      .box-combo {
+        height: 10vmin; /* Height is 10% of the smaller dimension */
+        width: 30vmax; /* Width is 30% of the larger dimension */
+        background-color: dodgerblue; /* Blue background */
+        color: white; /* White text for contrast */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Instruction box */
+      .instructions {
+        max-width: 600px; /* Limit the width for readability */
+        background-color: #222; /* Dark gray background */
+        color: white; /* White text for readability */
+        padding: 15px; /* Add padding inside the box */
+        border-radius: 8px; /* Rounded corners */
+        font-size: 1rem; /* Set font size for readability */
+        text-align: center; /* Center align the text */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow for visual appeal */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Instruction box -->
+    <div class="instructions">
+      <strong>How to Test:</strong>
+      <p>Resize your browser window to see how the boxes change in size.</p>
+    </div>
+
+    <!-- Box using vmin -->
+    <div class="box-vmin">vmin (20%)</div>
+
+    <!-- Box using vmax -->
+    <div class="box-vmax">vmax (20%)</div>
+
+    <!-- Box using a combination of vmin and vmax -->
+    <div class="box-combo">vmin + vmax</div>
+  </body>
+</html>

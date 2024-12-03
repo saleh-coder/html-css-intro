@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox: Direction & Line Break</title>
+    <style>
+        /* General body styling */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex; /* Enables Flexbox */
+            gap: 10px; /* Adds space between flex items */
+            background-color: #e6e6e6;
+            padding: 20px;
+            border: 2px solid #ccc;
+        }
+
+        .box {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            flex: 1; /* Makes all boxes the same size */
+            min-width: 100px;
+        }
+
+        /* Additional classes for flex-direction */
+        .row {
+            flex-direction: row; /* Default: left to right */
+        }
+
+        .row-reverse {
+            flex-direction: row-reverse; /* Right to left */
+        }
+
+        .column {
+            flex-direction: column; /* Top to bottom */
+        }
+
+        .column-reverse {
+            flex-direction: column-reverse; /* Bottom to top */
+        }
+
+        /* Example for wrapping content */
+        .wrap-container {
+            flex-wrap: wrap; /* Allows items to break onto a new line */
+            height: auto;
+        }
+
+        .nowrap-container {
+            flex-wrap: nowrap; /* Prevents line breaks */
+            overflow-x: auto; /* Adds horizontal scroll if content overflows */
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox: Direction & Line Break</h1>
+
+    <!-- Direction examples -->
+    <h2>Flex Direction</h2>
+    <div class="container row">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <p>Flex Direction: <code>row</code> (default: left to right)</p>
+
+    <div class="container row-reverse">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <p>Flex Direction: <code>row-reverse</code> (right to left)</p>
+
+    <div class="container column">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <p>Flex Direction: <code>column</code> (top to bottom)</p>
+
+    <div class="container column-reverse">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+    <p>Flex Direction: <code>column-reverse</code> (bottom to top)</p>
+
+    <!-- Line break examples -->
+    <h2>Flex Wrap</h2>
+    <div class="container wrap-container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+    <p>Flex Wrap: <code>wrap</code> (Items wrap to the next line when there's not enough space)</p>
+
+    <div class="container nowrap-container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+    <p>Flex Wrap: <code>nowrap</code> (Items stay in one line, may overflow horizontally)</p>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Columns and Rows</title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+            }
+
+            .grid > div {
+                border: solid cyan 4px;
+                padding: 5px;
+                margin: 2px;
+            }
+
+            .grid {
+                height: 100%;
+                
+                /* Enables grid layout on the container */
+                display: grid;
+
+                /* Defines the grid columns:
+                   - The first column takes 50% of the available width
+                   - The second column takes 20% of the available width
+                   - The third column takes 30% of the available width */
+                grid-template-columns: 50% 20% 30%;
+
+                /* Defines the grid columns using the repeat function:
+                   - 5 columns each taking 16.66% of the available width
+                   - The last column takes 16.67% */
+                grid-template-columns: repeat(5, 16.66%) 16.67%;
+
+                /* Defines the grid columns using the repeat function:
+                   - 12 columns each taking 8.33% of the available width */
+                grid-template-columns: repeat(12, 8.33%);
+
+                /* Defines the grid columns with specific pixel values:
+                   - 11 columns each taking 50px, the last column takes 200px */
+                grid-template-columns: repeat(11, 50px) 200px;
+
+                /* Defines the grid columns with flexible units (fr):
+                   - 6 equal-width columns */
+                grid-template-columns: repeat(6, 1fr);
+
+                /* Defines the grid columns with a mix of specific pixel values and flexible units:
+                   - The first column takes 200px, the second column takes 20%, and the third takes the remaining space */
+                grid-template-columns: 200px 20% 1fr;
+
+                /* Defines the grid columns with flexible units (fr):
+                   - The first column takes 3 fractions of the space, the second takes 6 fractions, and the third takes 1 fraction */
+                grid-template-columns: 3fr 6fr 1fr;
+
+                /* Defines the grid rows:
+                   - The first row takes 50% of the available height
+                   - The second row takes 25%
+                   - The third and fourth rows take 12.5% each */
+                grid-template-rows: 50% 25% 12.5% 12.5%;
+
+                /* Defines the grid rows with specific pixel and flexible units:
+                   - The first row takes 50px, and the second takes 1fr (remaining space) */
+                grid-template-rows: 50px 1fr;
+
+                /* Defines the grid rows with a mix of specific pixel and flexible units:
+                   - The first row takes 200px, and the other rows take auto height */
+                grid-template-rows: 200px auto auto auto;
+
+                /* Defines the grid rows using the repeat function:
+                   - The first row takes 200px, and the following rows take 1fr each */
+                grid-template-rows: 200px repeat(3, 1fr);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="d1">1</div>
+            <div class="d2">2</div>
+            <div class="d3">3</div>
+            <div class="d4">4</div>
+            <div class="d5">5</div>
+            <div class="d6">6</div>
+            <div class="d7">7</div>
+            <div class="d8">8</div>
+            <div class="d9">9</div>
+            <div class="d10">10</div>
+            <div class="d11">11</div>
+            <div class="d12">12</div>
+        </div>
+    </body>
+</html>

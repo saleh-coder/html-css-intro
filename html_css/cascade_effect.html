@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>The Cascade Effect in CSS</title>
+    <style>
+      /* Rule for general div elements */
+      div {
+        height: 100px;
+        width: 100px;
+        background-color: crimson;
+        color: white;
+      }
+
+      /* Rule for elements with the class "bigger" */
+      .bigger {
+        height: 150px;
+        width: 150px;
+      }
+
+      /* Rule for the element with the id "area2" */
+      #area2 {
+        font-family: monospace;
+        font-weight: bold;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Element with an inline style and a class of "bigger" -->
+    <div class="bigger" style="color: yellow">Area #01</div>
+
+    <!-- Element with the id "area2" -->
+    <div id="area2">Area #02</div>
+  </body>
+</html>

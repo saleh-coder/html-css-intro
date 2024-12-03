@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Unit #2</title>
+    <style>
+      /* Reset the margin for a clean layout */
+      body {
+        margin: 0;
+        color: white;
+        font-size: 2.5rem; /* Set base font size */
+      }
+
+      .application {
+        display: flex; /* Use Flexbox to align elements horizontally */
+        height: 100vh; /* Occupies the entire visible height of the viewport */
+      }
+
+      .menu {
+        background-color: #555;
+        width: 300px; /* Fixed width of 300px */
+        height: 100vh; /* Stretches to fill the entire viewport height */
+      }
+
+      .central_area {
+        min-height: 100vh; /* Ensures it also occupies the full viewport height */
+        width: calc(
+          100vw - 300px
+        ); /* Total viewport width minus the menu's width */
+      }
+
+      .superior-bar {
+        background-color: dodgerblue;
+        height: 8vh; /* 8% of the viewport height */
+      }
+
+      .content {
+        height: 84vh; /* 84% of the viewport height */
+        background-color: #ccc;
+        color: black; /* Black text */
+      }
+
+      .footer {
+        background-color: black;
+        height: 8vh; /* 8% of the viewport height */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Flex container for the application layout -->
+    <div class="application">
+      <!-- Sidebar menu -->
+      <div class="menu">Menu</div>
+      <!-- Central content area -->
+      <div class="central_area">
+        <!-- Top bar in the central area -->
+        <div class="superior-bar">Superior Bar</div>
+        <!-- Main content area -->
+        <div class="content">Content</div>
+        <!-- Footer section -->
+        <div class="footer">Footer</div>
+      </div>
+    </div>
+  </body>
+</html>

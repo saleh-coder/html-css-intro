@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Span #01</title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                margin: 60px;
+            }
+
+            .grid > div {
+                border: solid cyan 4px;
+                padding: 5px;
+                margin: 2px;
+            }
+
+            .grid {
+                height: 100%;
+                
+                /* Activates grid layout for the container */
+                display: grid;
+
+                /* Defines the grid columns with flexible units (fr):
+                   - The first column takes 3fr
+                   - The second column takes 6fr
+                   - The third column takes 1fr */
+                grid-template-columns: 3fr 6fr 1fr;
+
+                /* Defines the grid rows:
+                   - The first row has a fixed height of 200px
+                   - The next 4 rows take equal height (1fr each) */
+                grid-template-rows: 200px repeat(4, 1fr);
+            }
+
+            /* Style for the grid item with class "d8":
+               - Starts at the second column (grid-column-start: 2) and spans to the fourth column (grid-column-end: 4), 
+                 with the shorthand `span 2` meaning it spans 2 columns.
+               - Starts at the third row (grid-row-start: 3) and spans 2 rows (grid-row-end: span 2). */
+            .d8 {
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-column-end: span 2;
+
+                grid-row-start: 3;
+                grid-row-end: 5;
+                grid-row-end: span 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="d1">1</div>
+            <div class="d2">2</div>
+            <div class="d3">3</div>
+            <div class="d4">4</div>
+            <div class="d5">5</div>
+            <div class="d6">6</div>
+            <div class="d7">7</div>
+            <div class="d8">8</div>
+            <div class="d9">9</div>
+            <div class="d10">10</div>
+            <div class="d11">11</div>
+            <div class="d12">12</div>
+        </div>
+    </body>
+</html>

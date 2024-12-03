@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>Selectors #2</title>
+    <style>
+      /* Basic Styles */
+      body {
+        background-color: black; /* Sets the background color of the page to black */
+        color: white; /* Sets the text color to white */
+      }
+
+      /* Pseudo-Class Selector: :nth-child */
+      /* This targets div elements based on their position in the parent element */
+      /* Even divs will have a rebeccapurple background */
+      div:nth-child(even) {
+        background-color: rebeccapurple;
+      }
+
+      /* Odd divs will have a plum background */
+      div:nth-child(odd) {
+        background-color: plum;
+      }
+
+      /* Pseudo-Class Selector: :hover */
+      /* When a user hovers over a div element, its background color will change to purple */
+      div:hover {
+        background-color: purple;
+      }
+
+      /* Pseudo-Class Selector: :focus */
+      /* This targets an input field when it's in focus (clicked or active) */
+      /* Removes the default outline and adds a custom border with a rebeccapurple color */
+      input:focus {
+        outline: none; /* Removes the default focus outline */
+        border: 2px solid rebeccapurple; /* Adds a custom border */
+        border-radius: 2px; /* Rounds the corners of the border */
+      }
+
+      /* Pseudo-Element Selector: ::first-letter */
+      /* This targets the first letter of each paragraph */
+      /* Increases the font size of the first letter to make it stand out */
+      p::first-letter {
+        font-size: 50px; /* Makes the first letter larger */
+      }
+
+      /* Pseudo-Element Selector: ::first-line */
+      /* This targets the first line of the paragraph */
+      /* Makes the first line of the paragraph bold */
+      p::first-line {
+        font-weight: bold; /* Makes the first line bold */
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Pseudo-Class Selectors</h2>
+    <!-- div elements with different background colors based on position -->
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <input type="text" />
+    <!-- Focus on this input field to see the :focus effect -->
+
+    <h2>Pseudo-Element Selectors</h2>
+    <!-- The first letter and first line of these paragraphs will have special styles -->
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, ex,
+      dolorem nisi nesciunt nihil dignissimos provident quibusdam commodi
+      deserunt quis ad non vitae quos officia quae fuga fugit voluptates
+      laudantium.
+    </p>
+    <p>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+      doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+      inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+      fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+      sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit
+      amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora
+      incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+      minima veniam, quis nostrum exercitationem ullam corporis suscipit
+      laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum
+      iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
+      consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+    </p>
+  </body>
+</html>
+
+<!-- 
+   Explanation of the Lesson
+
+ **Pseudo-Class Selectors:**
+
+- **`:nth-child()`**: A pseudo-class used to style elements based on their position in a parent element.  
+  In this case, alternating background colors are applied to even and odd `<div>` elements.
+
+- **`:hover`**: This pseudo-class is applied when an element is hovered over by the user (e.g., with the mouse).  
+  It's commonly used for interactive elements such as buttons or links.
+
+- **`:focus`**: Targets input fields when they are active or focused.  
+  Custom styles, like border color and outline removal, are applied to enhance the user experience when interacting with form elements.
+
+---
+
+ **Pseudo-Element Selectors:**
+
+- **`::first-letter`**: This pseudo-element targets the first letter of the text inside an element (e.g., `<p>` tags).  
+  It is often used for decorative purposes, such as making the first letter of a paragraph larger or more prominent.
+
+- **`::first-line`**: Similar to `::first-letter`, this pseudo-element targets the first line of text in a block-level element (e.g., `<p>`).  
+  In this case, the first line is made bold, which can be useful for emphasizing the opening line of paragraphs.
+
+---
+
+ **Key Takeaways:**
+
+- **Pseudo-classes** allow you to target elements in specific states (like when they are hovered or focused).
+- **Pseudo-elements** allow you to target specific parts of an element (like the first letter or first line).
+- These selectors make it easy to apply styles dynamically based on user interaction or specific parts of the content, improving both user experience and design flexibility.
+
+This lesson demonstrates how to use advanced CSS selectors for greater control and customization in web design.
+
+-->

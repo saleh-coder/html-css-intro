@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox: Self Alignment</title>
+    <style>
+      /* General body styling */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        display: flex; /* Enables Flexbox */
+        gap: 10px; /* Adds space between flex items */
+        background-color: #e6e6e6;
+        padding: 20px;
+        border: 2px solid #ccc;
+        margin-bottom: 20px; /* Adds space between containers */
+        height: 200px; /* Fixed height to demonstrate cross axis alignment */
+      }
+
+      .box {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 1rem;
+        width: 100px; /* Fixed width for the boxes */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Self alignment examples */
+      .box--stretch {
+        align-self: stretch; /* Stretches this item to fill the container */
+      }
+
+      .box--start {
+        align-self: flex-start; /* Aligns this item at the start of the cross axis */
+      }
+
+      .box--center {
+        align-self: center; /* Centers this item along the cross axis */
+      }
+
+      .box--end {
+        align-self: flex-end; /* Aligns this item at the end of the cross axis */
+      }
+
+      .box--baseline {
+        align-self: baseline; /* Aligns this item along its text baseline */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox Self Alignment</h1>
+
+    <!-- Stretch one item to fill the container -->
+    <div class="container">
+      <div class="box box--stretch">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <p>Item 1 stretches with <code>align-self: stretch</code></p>
+
+    <!-- Align one item at the start of the cross axis -->
+    <div class="container">
+      <div class="box box--start">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <p>Item 1 aligned to the start with <code>align-self: flex-start</code></p>
+
+    <!-- Center one item along the cross axis -->
+    <div class="container">
+      <div class="box box--center">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <p>Item 1 centered with <code>align-self: center</code></p>
+
+    <!-- Align one item at the end of the cross axis -->
+    <div class="container">
+      <div class="box box--end">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <p>Item 1 aligned to the end with <code>align-self: flex-end</code></p>
+
+    <!-- Align one item along its text baseline -->
+    <div class="container">
+      <div class="box box--baseline" style="height: 50px;">Short</div>
+      <div class="box" style="height: 100px;">Tall</div>
+      <div class="box" style="height: 75px;">Medium</div>
+    </div>
+    <p>Item 1 aligned to its text baseline with <code>align-self: baseline</code></p>
+  </body>
+</html>

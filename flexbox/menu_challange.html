@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Desafio Menu</title>
+        <style>
+         @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+         * {
+            box-sizing: border-box;
+         } 
+
+         body {
+            margin: 0;
+            background-color: #bbb;
+            font-family: 'Oswald', sans-serif;
+         }
+
+         header {
+            background-color: #333;
+            color: white;
+            border-bottom: 3px solid #05aaaa;
+            height: 80px;
+            padding: 0px 10px;
+            font-size: 1.4rem;
+            font-weight: 200;
+
+            display: flex;
+            align-items: center;
+         }
+
+         .logo > a > img {
+          height: 50px;
+         }
+
+         .menu {
+            flex-grow: 1;
+            
+         }
+
+         .menu > ul {
+            list-style: none;
+            display: flex;
+         }
+
+         .menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0px 10px;
+         }
+
+         .menu a:hover {
+            background-color: #05aaaa;
+         }
+
+         .button {
+            padding: 5px 30px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+         }
+
+         .button.sign-up {
+            background-color: crimson;
+         }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="logo">
+                <a href="#inicio">
+                    <img src="../images/coder-logo.png" alt="Logo">
+                </a>
+            </div>
+                <nav class="menu">
+                  <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                  </ul>
+                </nav>
+            <div class="buttons">
+               <a class="button" href="#login">Login</a>
+               <a class="button sign-up" href="#sign-up">Sign Up</a>
+            </div>
+        </header>
+    </body>
+</html>

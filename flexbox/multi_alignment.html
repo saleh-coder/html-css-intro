@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox: Multiple Line Alignment with Flexbox</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        display: flex; /* Enables Flexbox */
+        flex-wrap: wrap; /* Allows items to wrap onto multiple lines */
+        gap: 10px; /* Adds spacing between items */
+        background-color: #e6e6e6;
+        padding: 10px;
+        border: 2px solid #ccc;
+        height: 500px; /* Increased height to create space for multiple lines */
+        width: 100%; /* Full width for responsiveness */
+        max-width: 1200px; /* Limits maximum width for larger screens */
+      }
+
+      .box {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        width: 100px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Multiple line alignment examples */
+      .container--stretch {
+        align-content: stretch; /* Default: lines stretch to fill the container */
+      }
+
+      .container--start {
+        align-content: flex-start; /* Align lines at the top */
+      }
+
+      .container--center {
+        align-content: center; /* Center lines vertically */
+      }
+
+      .container--end {
+        align-content: flex-end; /* Align lines at the bottom */
+      }
+
+      .container--space-between {
+        align-content: space-between; /* Distribute lines evenly with space in between */
+      }
+
+      .container--space-around {
+        align-content: space-around; /* Distribute lines with equal space around them */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox Multiple Line Alignment</h1>
+
+    <p>
+      Use the browser to explore how <code>align-content</code> works in Flexbox when there are multiple lines:
+    </p>
+    <ul>
+      <li>
+        Open the developer tools (right-click anywhere and select <strong>Inspect</strong> or press <strong>Ctrl+Shift+I</strong>).
+      </li>
+      <li>
+        Adjust the width of the browser window to force items to wrap into more lines. This makes the differences between
+        <code>align-content</code> values more noticeable.
+      </li>
+      <li>
+        In the developer tools, edit the container's styles dynamically to try different <code>align-content</code> values (like <code>flex-start</code>, <code>center</code>, <code>stretch</code>, etc.).
+      </li>
+    </ul>
+    <p>
+      You can also resize the height of the container or add/remove items to see how the alignment changes!
+    </p>
+
+    <h2>Stretch (Default)</h2>
+    <div class="container container--stretch">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+    <p><strong>Notice:</strong> Items stretch to fill available vertical space in the container.</p>
+
+    <h2>Flex Start</h2>
+    <div class="container container--start">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+    <p><strong>Notice:</strong> All lines are aligned to the top of the container.</p>
+
+    <h2>Center</h2>
+    <div class="container container--center">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+    <p><strong>Notice:</strong> All lines are centered vertically in the container.</p>
+
+    <h2>Flex End</h2>
+    <div class="container container--end">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+    <p><strong>Notice:</strong> All lines are aligned to the bottom of the container.</p>
+
+    <h2>Space Between</h2>
+    <div class="container container--space-between">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+    <p><strong>Notice:</strong> Space is distributed evenly between lines, with no space before the first or after the last line.</p>
+
+    <h2>Space Around</h2>
+    <div class="container container--space-around">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+      <div class="box">4</div>
+      <div class="box">5</div>
+      <div class="box">6</div>
+      <div class="box">7</div>
+      <div class="box">8</div>
+      <div class="box">9</div>
+    </div>
+    <p><strong>Notice:</strong> Space is distributed equally between lines, but half the space is applied to the top of the first line and the bottom of the last line.</p>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!-- https://www.w3schools.com/colors/colors_rgb.asp -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors #2</title>
+    <style>
+      /* Basic styles for the page */
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Enable flexbox layout */
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full height of the viewport */
+      }
+
+      li {
+        padding: 8px;
+        margin-right: 20px;
+      }
+
+      /* Styles for the box */
+      .box {
+        height: 80px;
+        width: 80px;
+        display: flex; /* Enable flexbox for easy content alignment */
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-weight: bold;
+      }
+
+      /* Blue box specific styles */
+      .blue {
+        background-color: deepskyblue;
+        color: rgba(60, 60, 120, 0.8); /* Text color using RGBA */
+        margin-top: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Brief explanation of RGBA -->
+    <div
+      style="
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-size: 14px;
+        max-width: 500px;
+      "
+    >
+      <h1>RGBA Color Model:</h1>
+      <p>The RGBA color model defines colors based on four components:</p>
+      <ul>
+        <li>
+          <strong>Red:</strong> The amount of red in the color (0 to 255). In
+          this example, the value is 60.
+        </li>
+        <li>
+          <strong>Green:</strong> The amount of green in the color (0 to 255).
+          In this example, the value is 60.
+        </li>
+        <li>
+          <strong>Blue:</strong> The amount of blue in the color (0 to 255). In
+          this example, the value is 120.
+        </li>
+        <li>
+          <strong>Alpha:</strong> The transparency level of the color (0 to 1).
+          0 is fully transparent, and 1 is fully opaque. In this example, the
+          value is 0.6, making the text semi-transparent.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Blue box with centered text -->
+    <div class="box blue">Colors #2</div>
+  </body>
+</html>

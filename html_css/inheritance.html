@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- Metadata and basic page settings -->
+    <meta charset="utf-8" />
+    <!-- Sets the character encoding to UTF-8 -->
+    <title>Inheritance</title>
+    <!-- Sets the page title displayed on the browser tab -->
+
+    <!-- Internal CSS for styling the page -->
+    <style>
+      /* Styles applied to the <body> element:
+               - Red border with 3px width
+               - Monospace font (Courier New or fallback options)
+               - Black background with white text color */
+      body {
+        border: solid 3px red;
+        font-family: "Courier New", Courier, monospace;
+        background-color: black;
+        color: white;
+      }
+
+      /* Styles applied to all <div> elements:
+               - The border is inherited from the parent element (in this case, <body>) */
+      div {
+        border: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Main heading of the page -->
+    <h1>Inheritance</h1>
+
+    <!-- A <div> demonstrating CSS inheritance:
+             It inherits the border property (red, solid, 3px) from the <body> element -->
+    <div>Page Content</div>
+  </body>
+</html>

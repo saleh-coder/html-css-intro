@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Span #03</title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                margin: 60px;
+            }
+
+            .grid > div {
+                border: solid cyan 4px;
+                padding: 5px;
+                margin: 2px;
+            }
+
+            .grid {
+                height: 100%;
+                
+                /* Activates grid layout for the container */
+                display: grid;
+
+                /* Defines the grid columns with named grid lines:
+                   - The first column spans from [col-start] to [col-middle-1]
+                   - The second column spans from [col-middle-1] to [col-middle-2]
+                   - The third column spans from [col-middle-2] to [col-end] */
+                grid-template-columns: 
+                    [col-start] 1fr 
+                    [col-middle-1 col-middle-1] 1fr 
+                    [col-middle-2 col-middle-2] 1fr [col-end];
+
+                /* Defines the grid rows:
+                   - All rows are equal in height (1fr each) */
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+
+            /* Style for the grid item with class "d1":
+               - It starts at [col-start] and ends at [col-middle-2]
+               - The `grid-column-end` property is incorrectly duplicated, and should only use one of the column lines to position the element correctly. */
+            .d1 {
+                grid-column-start: col-start;
+                grid-column-end: col-middle-2;
+                grid-column-end: col-middle-2; /* This line is redundant and should be removed */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="d1">1</div>
+            <div class="d2">2</div>
+            <div class="d3">3</div>
+        </div>
+    </body>
+</html>

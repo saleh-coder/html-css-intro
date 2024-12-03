@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positioning</title>
+    <style>
+      /* Global styles */
+      body {
+        background-color: black; /* Dark background for contrast */
+        color: white; /* White text for readability */
+        margin: 30px; /* Adds space around the page */
+        font-size: 20px; /* Base font size for content */
+        line-height: 1.6; /* Improves readability */
+        height: 3000px; /* Extends the height to demonstrate scrolling behavior */
+      }
+
+      /* Base styling for all divs */
+      div {
+        border: 5px solid #ccc; /* Light gray border */
+        padding: 20px; /* Space inside the box */
+        margin-bottom: 20px; /* Space between elements */
+        text-align: center; /* Centers the text inside */
+      }
+
+      /* Static positioning (default) */
+      .static {
+        position: static; /* Default position (no special behavior) */
+        background-color: dodgerblue; /* Blue background for identification */
+        /* The following properties are ignored for static positioning: */
+        top: 1000px;
+        right: 1000px;
+      }
+
+      /* Fixed positioning */
+      .fixed {
+        position: fixed; /* Fixed relative to the viewport */
+        bottom: 30px; /* 30px from the bottom of the viewport */
+        right: 30px; /* 30px from the right of the viewport */
+        background-color: purple; /* Purple background for identification */
+      }
+
+      /* Relative positioning */
+      .relative {
+        position: relative; /* Positioned relative to its normal position */
+        top: 10px; /* Moves 10px down from its original position */
+        left: 25px; /* Moves 25px to the right from its original position */
+        background-color: forestgreen; /* Green background for identification */
+      }
+
+      /* Absolute positioning */
+      .absolute {
+        position: absolute; /* Positioned relative to the nearest positioned ancestor */
+        top: 10px; /* 10px from the top of the containing block */
+        right: 10px; /* 10px from the right of the containing block */
+        background-color: red; /* Red background for identification */
+      }
+
+      /* Sticky positioning */
+      .sticky {
+        position: sticky; /* Sticks to a defined position within its container */
+        background-color: brown; /* Brown background for identification */
+        top: 0; /* Sticks to the top of its container when scrolling */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Static position example -->
+    <div class="static">
+      Static (Default) <br />
+      This is the default positioning for all elements.
+    </div>
+
+    <!-- Fixed position example -->
+    <div class="fixed">
+      Fixed <br />
+      This element is fixed to the viewport and does not move when scrolling.
+    </div>
+
+    <!-- Relative position example -->
+    <div class="relative">
+      Relative <br />
+      This element is positioned relative to its normal position.
+    </div>
+
+    <!-- Absolute position example -->
+    <div class="absolute">
+      Absolute <br />
+      This element is positioned relative to the nearest positioned ancestor.
+    </div>
+
+    <!-- Relative containing an absolute child -->
+    <div class="relative">
+      Relative (with an absolute child)
+      <div class="absolute">
+        Absolute (Inside Relative) <br />
+        This element is positioned relative to its parent.
+      </div>
+    </div>
+
+    <!-- Sticky position example -->
+    <div class="sticky">
+      Sticky <br />
+      This element will stick to the top of the page while scrolling and stop
+      when its parent ends.
+    </div>
+  </body>
+</html>

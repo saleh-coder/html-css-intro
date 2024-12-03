@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <!-- Title of the page, displayed on the browser tab -->
+    <title>Form</title>
+  </head>
+  <body>
+    <!-- Main heading for the form -->
+    <h2>Form</h2>
+
+    <!-- Form element, specifies where to send the form data (action) and how to send it (method) -->
+    <form action="exercises.html" method="get">
+      <!-- Section for the 'Name' input field -->
+      <div>
+        <div><label for="name">Name: </label></div>
+        <!-- Text input for the name, required field -->
+        <input type="text" name="name" id="name" required />
+      </div>
+
+      <!-- Section for the 'Email' input field -->
+      <div>
+        <div><label for="email">Email: </label></div>
+        <!-- Email input, required field -->
+        <input type="email" name="email" id="email" required />
+      </div>
+
+      <!-- Section for the 'Password' input field -->
+      <div>
+        <div><label for="password">Password:</label></div>
+        <!-- Password input, required field -->
+        <input type="password" name="password" id="password" required />
+      </div>
+
+      <!-- Section for the 'Bio' text area -->
+      <div>
+        <div><label for="bio">Tell us about yourself:</label></div>
+        <!-- Textarea input for a longer text entry -->
+        <textarea name="bio" id="bio" cols="25" rows="5"></textarea>
+      </div>
+
+      <!-- Section for the 'Residence Type' radio buttons -->
+      <div>
+        <div>Type of Residence:</div>
+        <!-- Radio buttons for residence options -->
+        <input type="radio" name="residence" id="house" value="house" />
+        <label for="house">House</label>
+        <input type="radio" name="residence" id="apartment" value="apartment" />
+        <label for="apartment">Apartment</label>
+        <input
+          type="radio"
+          name="residence"
+          id="country_house"
+          value="country_house"
+        />
+        <label for="country_house">Country house</label>
+        <input type="radio" name="residence" id="farm" value="farm" />
+        <label for="farm">Farm</label>
+      </div>
+
+      <!-- Section for the 'Plan' select dropdown -->
+      <div>
+        <select name="plan" id="plan">
+          <!-- Placeholder option -->
+          <option value="">Select a Plan</option>
+          <!-- Different plan options -->
+          <option value="free">Free Plan</option>
+          <option value="silver">Silver Plan - US$59.00</option>
+          <option value="gold">Gold Plan - US$89.00</option>
+        </select>
+      </div>
+
+      <!-- Section for the 'Interests' checkbox options -->
+      <div>
+        <div>Interests:</div>
+        <!-- Checkboxes for different interests -->
+        <input type="checkbox" name="tecnology" id="tecnology" />
+        <label for="tecnology">Technology</label>
+        <input type="checkbox" name="sport" id="sport" />
+        <label for="esport">Sports</label>
+        <input type="checkbox" name="cinema" id="cinema" />
+        <label for="cinema">Cinema</label>
+        <input type="checkbox" name="music" id="music" />
+        <label for="music">Music</label>
+      </div>
+
+      <!-- Section for the submit and reset buttons -->
+      <div>
+        <!-- Submit button to send the form data -->
+        <button>Save</button>
+        <!-- Reset button to clear the form fields -->
+        <button type="reset">Clear</button>
+      </div>
+    </form>
+  </body>
+</html>
+
+<!-- Summary of the comments:
+<title>: Sets the title of the page, which appears on the browser tab.
+<form>: The form element, which includes action (where to send the form data) and method (the method of sending data, in this case, "GET").
+<input>: Various types of input fields such as text, email, password, and radio buttons.
+<textarea>: A multi-line text field where the user can input longer text, such as their bio.
+<select> and <option>: A dropdown menu where users can choose a plan.
+<checkbox>: Checkboxes for users to select their interests.
+<button>: Buttons for submitting or resetting the form. -->
+
+<!-- 
+URL Explanation:
+- Base URL: file:///Users/username/Desktop/html-css-intro/html/exercises.html (location of the form file).
+- Form method: GET - Appends form data as query parameters to the URL.
+- `?`: Indicates the start of query parameters (key=value pairs).
+- Query parameters:
+  1) `name=coder` - User's name.
+  2) `email=coder%40coder.com` - User's email (`%40` is the encoded '@').
+  3) `password=123` - User's password.
+  4) `bio=Student` - User's biography.
+  5) `residence=apto` - Selected residence type (Apartment).
+  6) `plan=gold` - Selected plan (Gold Plan).
+  7) `tecnology=on` - Checkbox for "Technology" interest is checked.
+-->

@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <title>Display Property #1</title>
+    <style>
+      body {
+        color: white;
+      }
+
+      div {
+        display: block; /* Divs are block-level elements by default */
+        background-color: crimson;
+        /* margin: 5px; */
+      }
+
+      span {
+        display: inline-block; /* By default, spans are inline. Using inline-block allows for top and bottom margins to work */
+        background-color: dodgerblue;
+        margin: 5px; /* Margin added to the span */
+        padding: 5px; /* Padding inside the span */
+      }
+    </style>
+  </head>
+  <body>
+    <div>DIV #1</div>
+    <div>DIV #2</div>
+    <span>SPAN #1</span>
+    <span>SPAN #2</span>
+  </body>
+</html>
+
+<!-- 
+ Explanatory Comments:
+ div: The <div> element is by default a block-level element,
+ meaning it takes up the entire available width and starts on a 
+ new line.
+ 
+ span: The <span> element is by default an inline element, which
+ means it does not properly respect the top and bottom margins.
+ By using display: inline-block, the <span> element behaves like a 
+ block, allowing the correct use of vertical margins (top and bottom).
+ This is particularly useful when you want to apply vertical spacing, 
+ something that wouldn't work properly with a regular inline <span>.
+ -->

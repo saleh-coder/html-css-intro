@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Areas</title>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                background-color: black;
+                color: white;
+
+                /* Activates grid layout on the body */
+                display: grid;
+
+                /* Defines the grid columns:
+                   The first column is 180px, and the second takes the remaining space (1fr) */
+                grid-template-columns: 180px 1fr;
+
+                /* Defines the grid rows:
+                   The first and third rows have a fixed height of 50px,
+                   while the second row takes the remaining space (1fr) */
+                grid-template-rows: 50px 1fr 50px;
+
+                /* Defines the areas within the grid with specific names:
+                   - 'header' spans both columns in the first row.
+                   - 'menu' occupies the first column in the second row.
+                   - 'content' occupies the second column in the second row.
+                   - 'footer' spans both columns in the third row. */
+                grid-template-areas: 
+                    'header header'
+                    'menu content'
+                    'menu footer';
+
+                /* Defines the space between columns and rows */
+                column-gap: 5px;
+                row-gap: 5px;
+            }
+
+            /* Style for the direct children of the body (header, nav, main, footer),
+               adding a visible border to identify the areas */
+            body > * {
+                border: solid cyan 3px;
+            }
+
+            /* Style for the header, which occupies the 'header' area */
+            header {
+                border-color: crimson;
+                grid-area: header;
+            }
+
+            /* Style for the menu, which occupies the 'menu' area */
+            nav {
+                border-color: chartreuse;
+                grid-area: menu;
+            }
+
+            /* Style for the content, which occupies the 'content' area */
+            main {
+                grid-area: content;
+            }
+
+            /* Style for the footer, which occupies the 'footer' area */
+            footer {
+                border-color: deeppink;
+                grid-area: footer;
+            }
+        </style>
+    </head>
+    <body>
+        <header>Header</header>
+        <nav>Menu</nav>
+        <main>Content</main>
+        <footer>Footer</footer>
+    </body>
+</html>

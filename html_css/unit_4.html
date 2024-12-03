@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Position: Internal and External</title>
+    <style>
+      /* Global styles */
+      body {
+        background-color: black; /* Dark background for contrast */
+        color: white; /* White text for readability */
+        font-family: Arial, sans-serif; /* Clean and simple font */
+        display: flex; /* Center the example on the page */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100vh; /* Use full viewport height */
+        margin: 0; /* Remove default margins */
+      }
+
+      /* External container */
+      .external {
+        position: relative; /* Acts as the reference point for child absolute positioning */
+        background-color: orange; /* Distinct color for external box */
+        height: 400px; /* Fixed height */
+        width: 400px; /* Fixed width */
+        padding: 50px; /* Creates space between the internal box and the border */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add some depth with a shadow */
+        border-radius: 10px; /* Smooth the corners */
+      }
+
+      /* Internal box */
+      .internal {
+        position: relative; /* Change this value to test different behaviors */
+        background-color: mediumvioletred; /* Distinct color for internal box */
+        height: 50%; /* Takes 50% of the external container's height */
+        width: 50%; /* Takes 50% of the external container's width */
+        border-radius: 8px; /* Smooth the corners */
+        display: flex; /* Centers content inside the box */
+        justify-content: center; /* Horizontally center the text */
+        align-items: center; /* Vertically center the text */
+        color: white; /* White text for readability */
+      }
+
+      /* Fixed position example */
+      .fixed-internal {
+        position: fixed; /* Anchored to the viewport */
+        top: 20px; /* Distance from the top of the viewport */
+        left: 20px; /* Distance from the left of the viewport */
+        background-color: mediumvioletred;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%; /* Circular fixed element */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- External container -->
+    <div class="external">
+      <div class="internal">Relative</div>
+      <!-- Change "Relative" to match the active position -->
+    </div>
+
+    <!-- Fixed position example -->
+    <div class="fixed-internal">Fixed</div>
+    <!-- Always visible, anchored to the viewport -->
+  </body>
+</html>

@@ -1,0 +1,14 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+.even {
+  font-weight: bold;
+  background-color: crimson;
+  color: gold;
+}
+
+.highlight {
+  font-size: 30px;
+}

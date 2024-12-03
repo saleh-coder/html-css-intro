@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox: Item Growth</title>
+    <style>
+      /* General body styling */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        display: flex; /* Enables Flexbox */
+        gap: 10px; /* Adds space between flex items */
+        background-color: #e6e6e6;
+        padding: 20px;
+        border: 2px solid #ccc;
+        margin-bottom: 20px; /* Adds space between containers */
+        height: 200px; /* Fixed height to demonstrate growth */
+      }
+
+      .box {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 1rem;
+        width: 100px; /* Fixed width for the boxes */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Item growth examples */
+      .box--grow {
+        flex-grow: 1; /* Allows this item to grow and take up available space */
+      }
+
+      .box--grow-2 {
+        flex-grow: 2; /* Item 2 grows twice as much as Item 1 */
+      }
+
+      .box--grow-3 {
+        flex-grow: 3; /* Item 3 grows three times as much as Item 1 */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox: Item Growth</h1>
+
+    <!-- Example of item growth using flex-grow -->
+    <div class="container">
+      <div class="box box--grow">1</div>
+      <div class="box box--grow-2">2</div>
+      <div class="box box--grow-3">3</div>
+    </div>
+    <p>This example demonstrates how the <code>flex-grow</code> property allows flex items to grow and fill available space proportionally. Item 1 grows equally, item 2 grows twice as much, and item 3 grows three times as much.</p>
+
+  </body>
+</html>

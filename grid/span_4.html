@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Span #04</title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                margin: 60px;
+            }
+
+            .grid > div {
+                border: solid cyan 4px;
+                padding: 5px;
+                margin: 2px;
+            }
+
+            .grid {
+                height: 100%;
+                display: grid;
+                
+                /* Defines the grid columns with named grid lines:
+                   - The first column starts at [col-start] and spans 1fr.
+                   - The second column starts at [col-middle-1] and spans 1fr.
+                   - The third column starts at [col-middle-2] and spans 1fr until [col-end]. */
+                grid-template-columns: 
+                    [col-start] 1fr 
+                    [col-middle-1 col-half-1] 1fr 
+                    [col-middle-2 col-half-2] 1fr [col-end];
+
+                /* Defines the grid rows, each taking equal height (1fr) */
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+
+            /* .d1 spans from column 2 and spans across two columns */
+            .d1 {
+                grid-column: 2 / span 2; /* Starts at column 2 and spans across 2 columns */
+            }
+
+            /* .d2 starts at the first column line and spans until [col-middle-1] 
+               It also spans all 3 rows */
+            .d2 {
+                grid-column: col-start / col-middle-1; /* Starts at col-start and ends at col-middle-1 */
+                grid-row: 1 / span 3; /* Spans across all 3 rows */
+            }
+
+            /* .d3 is positioned using grid-area shorthand:
+               - Starts at row 2, column 2
+               - Spans 2 rows and 2 columns */
+            .d3 {
+                grid-area: 2 / 2 / span 2 / span 2; /* Starts at row 2, column 2 and spans 2 rows and 2 columns */
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="d1">1</div>
+            <div class="d2">2</div>
+            <div class="d3">3</div>
+        </div>
+    </body>
+</html>

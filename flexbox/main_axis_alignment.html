@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox: Main Axis Alignment</title>
+    <style>
+      /* General body styling */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        display: flex; /* Enables Flexbox */
+        gap: 10px; /* Adds space between flex items */
+        background-color: #e6e6e6;
+        padding: 20px;
+        border: 2px solid #ccc;
+        margin-bottom: 20px; /* Adds space between containers */
+      }
+
+      .box {
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 1rem;
+        width: 100px; /* Fixed width for the boxes */
+        height: 100px; /* Fixed height for the boxes */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Main axis alignment examples */
+      .container--start {
+        justify-content: flex-start; /* Aligns items to the start of the main axis */
+      }
+
+      .container--center {
+        justify-content: center; /* Centers items along the main axis */
+      }
+
+      .container--end {
+        justify-content: flex-end; /* Aligns items to the end of the main axis */
+      }
+
+      .container--space-between {
+        justify-content: space-between; /* Distributes items with space between them */
+      }
+
+      .container--space-around {
+        justify-content: space-around; /* Distributes items with space around them */
+      }
+
+      /* Vertical container (flex-direction column) */
+      .container--vertical {
+        flex-direction: column; /* Main axis becomes vertical */
+        justify-content: center; /* Centers items vertically */
+        height: 300px; /* Set a height to demonstrate vertical alignment */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox Main Axis Alignment</h1>
+
+    <!-- Align items at the start of the main axis -->
+    <div class="container container--start">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <p>Align items with <code>justify-content: flex-start</code> (start of the main axis)</p>
+
+    <!-- Center items along the main axis -->
+    <div class="container container--center">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <p>Center items with <code>justify-content: center</code> (center of the main axis)</p>
+
+    <!-- Align items at the end of the main axis -->
+    <div class="container container--end">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <p>Align items with <code>justify-content: flex-end</code> (end of the main axis)</p>
+
+    <!-- Distribute items with space between them -->
+    <div class="container container--space-between">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <p>Distribute items with <code>justify-content: space-between</code> (space between items)</p>
+
+    <!-- Distribute items with space around them -->
+    <div class="container container--space-around">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <p>Distribute items with <code>justify-content: space-around</code> (equal space around items)</p>
+
+    <!-- Vertical container (flex-direction column) -->
+    <h2>Vertical Layout (Main Axis is Vertical)</h2>
+    <div class="container container--vertical">
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">3</div>
+    </div>
+    <p>Align items vertically with <code>flex-direction: column</code> (main axis is vertical)</p>
+  </body>
+</html>

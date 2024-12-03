@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Understanding Box Sizing</title>
+    <style>
+      /* Apply box-sizing globally for consistent behavior */
+      * {
+        box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+      }
+
+      /* Styling for the page */
+      body {
+        background-color: #121212;
+        color: #ffffff;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+      }
+
+      h1,
+      p {
+        margin: 0 0 15px;
+      }
+
+      /* Style for the example box */
+      .box {
+        height: 100px; /* Defined height */
+        width: 100px; /* Defined width */
+        background-color: crimson; /* Box background color */
+        padding: 10px; /* Internal space between content and border */
+        border: 5px solid white; /* Border width and color */
+        /* Try toggling between the two box-sizing values */
+        /* box-sizing: content-box; Uncomment this line to see the effect */
+      }
+
+      /* Style for the explanatory text container */
+      .info {
+        margin-top: 20px;
+      }
+
+      .info div {
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Box Sizing: How It Affects Layout</h1>
+    <p>
+      The <strong>box-sizing</strong> property in CSS determines how the total
+      width and height of an element are calculated.
+    </p>
+
+    <div class="box">Content</div>
+
+    <div class="info">
+      <div>
+        <strong>content-box (default):</strong> The width and height include
+        only the content. Padding and border are added outside of these
+        dimensions.
+      </div>
+      <div>
+        <strong>border-box:</strong> The width and height include the content,
+        padding, and border. This is often easier to work with for layout
+        design.
+      </div>
+    </div>
+
+    <p>
+      In this example, the red box has a height and width of 100px. When using
+      <strong>content-box</strong>, the padding and border are added outside,
+      making the total size larger. With <strong>border-box</strong>, the
+      padding and border are included within the 100px, keeping the total size
+      consistent.
+    </p>
+  </body>
+</html>

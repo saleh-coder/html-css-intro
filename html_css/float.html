@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float Example</title>
+    <style>
+      body {
+        background-color: #1a1a1a;
+        margin: 0;
+        padding: 20px;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      div {
+        height: 150px;
+        width: 150px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
+        text-align: center;
+        line-height: 150px;
+        font-weight: bold;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      /* The first box floats to the right */
+      .c1 {
+        background-color: #e74c3c;
+        float: right; /* Moves the element to the far-right of its container */
+      }
+
+      /* The second box also floats right but clears other floated elements on the right */
+      .c2 {
+        background-color: #27ae60;
+        float: right; /* Moves this element to the far-right */
+        clear: right; /* Ensures this element does not overlap any floated elements on the right */
+      }
+
+      /* The third box floats right like the others */
+      .c3 {
+        background-color: #3498db;
+        float: right; /* Moves this element to the far-right */
+      }
+
+      /* The fourth box does not float and clears all floated elements */
+      .c4 {
+        background-color: #f39c12;
+        clear: both; /* Ensures this element appears below all floated elements */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- First box floating to the right -->
+    <div class="c1">C1</div>
+
+    <!-- Second box floats to the right and clears previous floated elements on the right -->
+    <div class="c2">C2</div>
+
+    <!-- Third box floating to the right -->
+    <div class="c3">C3</div>
+
+    <!-- Fourth box clears all floated elements and sits on a new line -->
+    <div class="c4">C4</div>
+  </body>
+</html>

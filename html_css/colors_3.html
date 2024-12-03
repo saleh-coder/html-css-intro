@@ -1,0 +1,102 @@
+<!-- Useful tools for color palettes -->
+<!-- Coolors: https://coolors.co/ -->
+<!-- Paletton: https://paletton.com/ -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors #3</title>
+    <style>
+      /* Basic page styling */
+      body {
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Stack content vertically */
+        min-height: 100vh; /* Ensure content fills the viewport */
+      }
+
+      /* Explanation box styling */
+      .info {
+        position: relative;
+        text-align: left;
+        margin-bottom: 50px;
+        max-width: 500px;
+        line-height: 1.5;
+      }
+
+      .info h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      .info p,
+      .info ul {
+        font-size: 14px;
+      }
+
+      .info ul {
+        list-style-type: disc;
+        margin-left: 20px;
+      }
+
+      /* Styled color demonstration box */
+      .box {
+        height: 120px;
+        width: 120px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      /* Specific colors for the hex example box */
+      .hex {
+        background-color: #32cd32; /* Lime green */
+        color: #ff4500; /* Orange-red text */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Explanation of Hexadecimal Colors -->
+    <div class="info">
+      <h1>Hexadecimal Colors</h1>
+      <p>
+        Hexadecimal (or Hex) colors use a 6-character code to represent colors
+        in the format <code>#RRGGBB</code>, where each pair of characters
+        represents a color component:
+      </p>
+      <ul>
+        <li>
+          <strong>RR:</strong> Red component (00 to FF, where FF is 255 in
+          decimal).
+        </li>
+        <li><strong>GG:</strong> Green component (00 to FF).</li>
+        <li><strong>BB:</strong> Blue component (00 to FF).</li>
+      </ul>
+      <p>
+        For example, the code <code>#32CD32</code> corresponds to a lime green
+        color:
+      </p>
+      <ul>
+        <li><strong>32:</strong> Red value in hexadecimal (50 in decimal).</li>
+        <li>
+          <strong>CD:</strong> Green value in hexadecimal (205 in decimal).
+        </li>
+        <li><strong>32:</strong> Blue value in hexadecimal (50 in decimal).</li>
+      </ul>
+    </div>
+
+    <!-- Example of a box styled with Hexadecimal Colors -->
+    <div class="box hex">Colors #3</div>
+  </body>
+</html>

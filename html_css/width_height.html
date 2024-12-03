@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Width & Height Example</title>
+    <style>
+      /* General body styling */
+      body {
+        background-color: #1a1a1a; /* Dark background for contrast */
+        margin: 0;
+        padding: 0;
+        height: 100vh; /* 100% of the viewport height */
+        display: flex;
+        flex-wrap: wrap; /* Allows elements to adjust into rows */
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+
+      /* General styling for boxes */
+      .box {
+        display: inline-block; /* Elements stay side by side */
+        height: 50%; /* 50% of the body height */
+        width: 50%; /* 50% of the body width */
+        box-sizing: border-box; /* Includes borders in width/height calculation */
+        border: 2px solid white; /* Borders for clear visualization */
+        text-align: center;
+        line-height: calc(
+          50vh - 4px
+        ); /* Vertically centers text, accounting for border */
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      /* Red box */
+      .c1 {
+        background-color: #e74c3c; /* Soft red */
+      }
+
+      /* Green box */
+      .c2 {
+        background-color: #27ae60; /* Soft green */
+      }
+
+      /* Caption styling */
+      .caption {
+        position: absolute;
+        bottom: 10px;
+        text-align: center;
+        width: 100%;
+        font-size: 1.2rem;
+        color: #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Box 1 (red) -->
+    <div class="box c1">50% Width & Height</div>
+
+    <!-- Box 2 (green) -->
+    <div class="box c2">50% Width & Height</div>
+
+    <!-- Caption explaining the example -->
+    <div class="caption">
+      This example demonstrates the use of <strong>width</strong> and
+      <strong>height</strong> as percentages of the parent element.
+    </div>
+  </body>
+</html>
